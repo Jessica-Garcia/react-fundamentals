@@ -1,5 +1,20 @@
-import './styles/global.scss';
+import { Post } from "./Post";
 
 export function App() {
-  return <h1> Hello World! </h1>
+
+  return (
+    <div>
+      <Post 
+        author="Janis" 
+        content="Kozmic blues"
+      />
+      <Post 
+        author="Keith" 
+        content="You got the silver"
+      />
+    </div>
+    
+  )
 }
+
+
