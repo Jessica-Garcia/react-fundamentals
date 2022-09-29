@@ -11,7 +11,7 @@ export function Post() {
                         className={styles.avatar}
                         src="https://github.com/Jessica-Garcia.png"
                     />
-                    <div className={styles.authorIfo}>
+                    <div className={styles.authorInfo}>
                         <strong>Jéssica</strong>
                         <span>Dev</span>
                     </div>
@@ -28,6 +28,16 @@ export function Post() {
                 <p> <a  href="#">jessi.dev/dev</a></p>
                 <p><a href="#">#novoprojeto</a></p>
             </div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu comentário</strong>
+                <textarea 
+                    placeholder='Deixe seu comentário'
+                />
+                <footer>
+                    <button type='submit'>Publicar</button>
+                </footer>
+            </form>
         </article>
     )
 };
