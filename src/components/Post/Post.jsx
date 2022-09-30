@@ -1,4 +1,5 @@
 import { HandWaving } from 'phosphor-react';
+import { Avatar } from '../Avatar/Avatar';
 import { Comment } from '../Comment/Comment';
 import styles from './Post.module.css';
 
@@ -8,12 +9,11 @@ export function Post() {
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img 
-                        className={styles.avatar}
-                        src="https://github.com/Jessica-Garcia.png"
+                    <Avatar
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60&h=500"
                     />
                     <div className={styles.authorInfo}>
-                        <strong>Jéssica</strong>
+                        <strong>Mick</strong>
                         <span>Dev</span>
                     </div>
                 </div>
