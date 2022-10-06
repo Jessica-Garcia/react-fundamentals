@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Avatar } from '../Avatar/Avatar';
 import { Comment } from '../Comment/Comment';
 import styles from './Post.module.css';
+
 export function Post({author, publishedAt, content}) {
     
     const [comments, setComments] = useState([
@@ -35,9 +36,9 @@ export function Post({author, publishedAt, content}) {
 
     const setContentByType = line => {
         if(line.type === 'paragraph') {
-            return <p>{line.content}</p>
+            return <p key={line.content}>{line.content}</p>
         }
-        return <p><a href='#'>{line.content}</a></p>
+        return <p key={line.content}><a href='#'>{line.content}</a></p>
     }
 
     return (
@@ -79,7 +80,10 @@ export function Post({author, publishedAt, content}) {
             <div className={styles.commentList}>
                 
                 {comments.map(comment => {
-                    return <Comment content={comment}/>
+                    return <Comment
+                        key={comment}
+                        content={comment}
+                    />
                 })}
 
             </div>
