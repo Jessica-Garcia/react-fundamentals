@@ -8,7 +8,7 @@ import styles from './Post.module.css';
 export function Post({author, publishedAt, content}) {
     
     const [comments, setComments] = useState([
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit...'
     ])
 
     const [newCommentText, setNewCommentText] = useState('')
@@ -32,6 +32,12 @@ export function Post({author, publishedAt, content}) {
 
     function handleNewCommentChange(e) {
         setNewCommentText(e.target.value)     
+    }
+
+    const deleteComment = (commentForDelete) => {
+        const newListWithoutDeletedOne = comments.filter(comment => comment !== commentForDelete);
+
+        setComments(newListWithoutDeletedOne);
     }
 
     const setContentByType = line => {
@@ -83,6 +89,7 @@ export function Post({author, publishedAt, content}) {
                     return <Comment
                         key={comment}
                         content={comment}
+                        onDeleteComment={deleteComment}
                     />
                 })}
 
