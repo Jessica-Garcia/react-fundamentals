@@ -13,9 +13,9 @@ const posts = [
       role: 'Dev'
     },
     content: [
-      {type: 'paragraph', content: 'Lorem Ipsum' },
-      {type: 'paragraph', content: 'Lorem ipsum dolor sit.'},
-      {type: 'link', content: 'Lorem.ipsum/dolorsit'},
+      {type: 'paragraph', content: 'Lorem Ipsum!' },
+      {type: 'paragraph', content: 'Lorem ipsum dolor (sit).'},
+      {type: 'link', content: 'Lorem.ipsum/dolo-rsit'},
     ],
     publishedAt: new Date('2022-10-01 16:00'),
   },
@@ -27,9 +27,9 @@ const posts = [
       role: 'Dev'
     },
     content: [
-      {type: 'paragraph', content: 'Lorem Ipsum' },
-      {type: 'paragraph', content: 'Lorem ipsum dolor sit.'},
-      {type: 'link', content: 'Lorem.ipsum/dolorsit'},
+      {type: 'paragraph', content: 'Lorem Ipsum.' },
+      {type: 'paragraph', content: 'Lorem ipsum dolor sit..'},
+      {type: 'link', content: 'Lorem.ipsum/dolorsit.'},
     ],
     publishedAt: new Date('2022-10-01 14:00'),
   }
